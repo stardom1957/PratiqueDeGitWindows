@@ -54,12 +54,30 @@ Version 2.1.352-2-gf..., 2022-08-29
     
 ## Faire des changements
 ### Changements au dernier commit
- 1.6 ```git commit --amend``` : voir 1.1 à 1.4<br>
+ 2. ```git commit --amend``` : voir 1.1 à 1.4<br>
  
 ### Unstaging (Pro Git p.47)
-Pour enlever un ou des fichiers du « staging area ».
-  1.7 Commande « git restore --staged »
-  1.8 touch test.txt
-  1.9 ajouté qqe lignes de texte
- ```git restore --staged ...```
- 
+Pour enlever un ou des fichiers du « staging area ».<br>
+  2.1 Commande « git restore --staged »<br>
+  
+  2.2 touch test.txt<br>
+  2.3 ajouté qqe lignes de texte<br>
+  
+  2.4 ajouté test.txt au staging area<br>
+  
+  2.5 ```git restore --staged test.txt```<br>
+  
+  2.6 ```git status``` indique que test.txt est Untracted (car pas encore commited)<br>
+  
+  2.7 git add test.txt<br>
+  
+  2.8 git commit -m "Test de unstaging sur test.txt"<br>
+  2.9 ajouté quatre nlle lignes à text.txt<br>
+  
+  2.10 ```git add .```<br>
+  
+  2.11 ```git restore --staged test.txt```<br>
+       Cette fois git status indique fichier test.txt modified<br>
+       
+  2.12 Modifié test.txt (enlevés des lignes au début)<br>
+  2.13 git add ., puis git commit -m "Nouveau fichier test.txt"
