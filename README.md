@@ -52,9 +52,9 @@ Version 2.1.352-2-gf..., 2022-08-29
   - Would you like to push commits from the current branch to "origin"? Y<br>
     ... Pushed commits to https://github.com/stardom1957/PratiqueDeGitWindows.git<br>
 
-* par la suite ```git remote -v```` donne ceci :
->origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (fetch)
->origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (push)
+* par la suite ```git remote -v```` donne ceci :<br>
+>origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (fetch)<br>
+>origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (push)<br>
 
 
 ## Faire des changements
@@ -64,7 +64,7 @@ Version 2.1.352-2-gf..., 2022-08-29
 ### Unstaging (Pro Git p.47) avec git restore
 Pour enlever un ou des fichiers du « staging area ».<br>
 4. La commande est ```git restore --staged```<br>
- 4.1 libre
+ 4.1 libre<br>
   
  4.2 touch test.txt<br>
  4.3 ajouté qqe lignes de texte<br>
@@ -82,18 +82,18 @@ Pour enlever un ou des fichiers du « staging area ».<br>
   
  4.11 ```git restore --staged test.txt```<br>
        Cette fois git status indique fichier test.txt modified<br>
-       ATTENTION : pas de git commit --amend pour ce commit à partir de ce point car il y a eu push vers origin (Pro Git, p. 45)
+       ATTENTION : pas de git commit --amend pour ce commit à partir de ce point car il y a eu push vers origin (Pro Git, p. 45)<br>
 
  4.12 Modifié test.txt (enlevés des lignes au début)<br>
  4.13 git add ., puis git commit -m "Nouveau fichier test.txt"
- 4.14 ```git push origin main```
+ 4.14 ```git push origin main```<br>
   
 ### Annuler les modifications d'un fichier avec git restore (Pro Git p. 48)
-Cette opération annule toutes les modifications d'un fichier consignées dans le dernier commit.
-5. La commande est ```git restore <fichier>```
- 5.1 ajout de 4 lignes à test.txt
- 4.2 bien sûr, git status indique que le fichier est modifié et ```cat test.txt``` montre les nlles lignes.
- 4.3 fermeture de test.txt dans l'éditeur
- 4.3 ```git restore test.txt```, puis
- 4.4 ```cat test.tst```confirme que les changements sont disparuset ```git status```, n'indique aucune modification au fichier.
+Cette opération annule toutes les modifications d'un fichier consignées dans le dernier commit.<br>
+5. La commande est ```git restore <fichier>```<br>
+ 5.1 ajout de 4 lignes à test.txt<br>
+ 5.2 bien sûr, git status indique que le fichier est modifié et ```cat test.txt``` montre les nlles lignes.<br>
+ 5.3 fermeture de test.txt dans l'éditeur<br>
+ 5.3 ```git restore test.txt```, puis<br>
+ 5.4 ```cat test.tst```confirme que les changements sont disparuset ```git status```, n'indique aucune modification au fichier.<br>
  
