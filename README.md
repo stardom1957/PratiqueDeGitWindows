@@ -51,33 +51,49 @@ Version 2.1.352-2-gf..., 2022-08-29
   - What should the new remote be called? (origin) (valeur par défaut)<br>
   - Would you like to push commits from the current branch to "origin"? Y<br>
     ... Pushed commits to https://github.com/stardom1957/PratiqueDeGitWindows.git<br>
-    
+
+* par la suite ```git remote -v```` donne ceci :
+>origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (fetch)
+>origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (push)
+
+
 ## Faire des changements
-### Changements au dernier commit
- 2. ```git commit --amend``` : voir 1.1 à 1.4<br>
+### Changements au dernier commit avec git commit --amend
+3. ```git commit --amend``` : voir 1.1 à 1.4<br>
  
-### Unstaging (Pro Git p.47)
+### Unstaging (Pro Git p.47) avec git restore
 Pour enlever un ou des fichiers du « staging area ».<br>
-  2.1 Commande « git restore --staged »<br>
+4. La commande est ```git restore --staged```<br>
+ 4.1 libre
   
-  2.2 touch test.txt<br>
-  2.3 ajouté qqe lignes de texte<br>
+ 4.2 touch test.txt<br>
+ 4.3 ajouté qqe lignes de texte<br>
   
-  2.4 ajouté test.txt au staging area<br>
+ 4.4 ajouté test.txt au staging area<br>
+ 4.5 ```git restore --staged test.txt```<br>
   
-  2.5 ```git restore --staged test.txt```<br>
+ 4.6 ```git status``` indique que test.txt est Untracted (car pas encore commited)<br>
+ 4.7 git add test.txt<br>
   
-  2.6 ```git status``` indique que test.txt est Untracted (car pas encore commited)<br>
+ 4.8 git commit -m "Test de unstaging sur test.txt"<br>
+ 4.9 ajouté quatre nlle lignes à text.txt<br>
   
-  2.7 git add test.txt<br>
+ 4.10 ```git add .```<br>
   
-  2.8 git commit -m "Test de unstaging sur test.txt"<br>
-  2.9 ajouté quatre nlle lignes à text.txt<br>
-  
-  2.10 ```git add .```<br>
-  
-  2.11 ```git restore --staged test.txt```<br>
+ 4.11 ```git restore --staged test.txt```<br>
        Cette fois git status indique fichier test.txt modified<br>
-       
-  2.12 Modifié test.txt (enlevés des lignes au début)<br>
-  2.13 git add ., puis git commit -m "Nouveau fichier test.txt"
+       ATTENTION : pas de git commit --amend pour ce commit à partir de ce point car il y a eu push vers origin (Pro Git, p. 45)
+
+ 4.12 Modifié test.txt (enlevés des lignes au début)<br>
+ 4.13 git add ., puis git commit -m "Nouveau fichier test.txt"
+ 4.14 ```git push origin main```
+  
+### Annuler les modifications d'un fichier avec git restore (Pro Git p. 48)
+Cette opération annule toutes les modifications d'un fichier consignées dans le dernier commit.
+5. La commande est ```git restore <fichier>```
+ 5.1 ajout de 4 lignes à test.txt
+ 4.2 bien sûr, git status indique que le fichier est modifié et ```cat test.txt``` montre les nlles lignes.
+ 4.3 fermeture de test.txt dans l'éditeur
+ 4.3 ```git restore test.txt```, puis
+ 4.4 ```cat test.tst```confirme que les changements sont disparuset ```git status```, n'indique aucune modification au fichier.
+ 
