@@ -40,9 +40,6 @@ Version 2.1.352-2-gf..., 2022-08-29
 ... Logged in to github.com as stardom1957...
 
 * Commande ```gh repo create```, avec indications (en interactif) :<br><br>
-  - Push an existing local repository to GitHub<br>
-  - Path to local repository .<br>
-  - intention de faire un push à la fin = Oui<br>
   - Repository name (PratiqueDeGitWindows) (valeur par défaut)<br>
   - Description Repo pour la pratique ...<br>
   - Visibility Public<br>
