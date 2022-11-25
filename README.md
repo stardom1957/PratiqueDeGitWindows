@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 # Journal PratiqueDeGitWindows
 Afin d'éviter des possibles emerdements, j'utiliserai ce site pour les tests et pratiques dans git sous Windows. Ce document servira donc de journal pour les op�rations.
+=======
+# PratiqueDeGitWindows
+Afin d'éviter des possibles emerdements, j'utiliserai ce site pour les tests et pratiques dans git sous Windows. Ce document servira donc de journal pour les opérations.
+>>>>>>> 9b00aa879fc7686d46c50388e66c99fc1b52c786
 
 ## Version du manuel Pro Git; citations ou références :
 Version 2.1.352-2-gf..., 2022-08-29
 
 ## 2022-10-12 - création du repo et remote
+<<<<<<< HEAD
 0. Ouverture du repo, dans un terminal MINGW64 (git Bash) :<br>
+=======
+0. Ouverture du répo, dans un terminal MINGW64 (git Bash) :<br>
+>>>>>>> 9b00aa879fc7686d46c50388e66c99fc1b52c786
  0.1 git init -b main<br>
  0.2 touch README.md<br>
  0.3 touch .gitignore<br>
@@ -34,6 +43,7 @@ Version 2.1.352-2-gf..., 2022-08-29
   1.4 Après plusieurs autres ```commit amend...```, il n'y a effectivement qu'un seul commit (initial) visible dans le repo.<br>
     
   1.5 Création du remote; notes tirée de DGMaNi/cr20220909.md :<br>
+<<<<<<< HEAD
   Note : Les CLI `gh` ne fonctionnent pas dans un terminal MINGW64 (git Bash); **fonctionnent seulement dans un terminal Anaconda** :<br>
 * Avec un repo local bien en ordre, c'est à dire la commande `git status`  retourne nothing added to commit ... <br>
 * Avec un login correct vers le compte GitHub; `gh auth status` retourne
@@ -43,6 +53,14 @@ Version 2.1.352-2-gf..., 2022-08-29
   - Push an existing local repository to GitHub<br>
   - Path to local repository .<br>
   - intention de faire un push à la fin = Oui<br>
+=======
+  Note : Les CLI ```gh``` ne fonctionnent pas dans un terminal MINGW64 (git Bash); **fonctionnent seulement dans un terminal Anaconda** :<br>
+* Avec un repo local bien en ordre, c'est à dire la commande ```git status``` « retourne nothing added to commit ... »<br>
+* Avec un login correct vers le compte GitHub; ```gh auth status``` retourne
+... Logged in to github.com as stardom1957...
+
+* Commande ```gh repo create```, avec indications (en interactif) :<br><br>
+>>>>>>> 9b00aa879fc7686d46c50388e66c99fc1b52c786
   - Repository name (PratiqueDeGitWindows) (valeur par défaut)<br>
   - Description Repo pour la pratique ...<br>
   - Visibility Public<br>
@@ -52,7 +70,7 @@ Version 2.1.352-2-gf..., 2022-08-29
   - Would you like to push commits from the current branch to "origin"? Y<br>
     ... Pushed commits to https://github.com/stardom1957/PratiqueDeGitWindows.git<br>
 
-* par la suite ```git remote -v```` donne ceci :<br>
+* par la suite ```git remote -v``` donne ceci :<br>
 >origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (fetch)<br>
 >origin  https://github.com/stardom1957/PratiqueDeGitWindows.git (push)<br>
 
@@ -76,15 +94,25 @@ Pour enlever un ou des fichiers du « staging area ».<br>
  4.7 git add test.txt<br>
   
  4.8 git commit -m "Test de unstaging sur test.txt"<br>
+<<<<<<< HEAD
  4.9 ajout� quatre nlle lignes à text.txt<br>
+=======
+ 4.9 ajouté quatre nlle lignes à text.txt<br>
+>>>>>>> 9b00aa879fc7686d46c50388e66c99fc1b52c786
   
  4.10 ```git add .```<br>
   
  4.11 ```git restore --staged test.txt```<br>
        Cette fois git status indique fichier test.txt modified<br>
+<<<<<<< HEAD
        **ATTENTION** : pas de git ``commit --amend`` pour ce commit à partir de ce point car il y a eu push vers origin (Pro Git, p. 45)<br>
 
  4.12 Modifié test.txt (enlev�s des lignes au d�but)<br>
+=======
+       ATTENTION : pas de git commit --amend pour ce commit à partir de ce point car il y a eu push vers origin (Pro Git, p. 45)<br>
+
+ 4.12 Modifié test.txt (enlevés des lignes au début)<br>
+>>>>>>> 9b00aa879fc7686d46c50388e66c99fc1b52c786
  4.13 git add ., puis git commit -m "Nouveau fichier test.txt"
  4.14 ```git push origin main```<br>
   
